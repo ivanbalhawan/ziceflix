@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ZiceFlix</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coda&family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="top-bar">
+      <div id="nav-bar">
+        <h2 class="nav-button"> Movies </h2>
+        <h2 class="nav-button"> Series </h2>
+      </div>
+      <div id="title">
+        <h1> ZiceFlix </h1>
+      </div>
+      <div class="main-content">
+        <ul>
+        {% for series_title in series_titles %}
+          <li class="entry">
+            <a href= "{{ url_for('series_title_page', series_title=series_title) }}">{{ series_title }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+    
+

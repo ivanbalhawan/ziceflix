@@ -1,0 +1,82 @@
+body {
+  margin: 0px;
+  background-color: #44475a;
+}
+
+.top-bar {
+  border: none;
+  height: 10vh;
+  background-color: #282a36;
+}
+#nav-bar {
+  position: absolute;
+  height: 10vh;
+  line-height: 10vh;
+  left: 5vw;
+  display: inline-block;
+}
+.nav-button {
+  font-family: 'Press Start 2P', cursive;
+  display: inline-block;
+  margin-right: 3vw;
+  text-align: center;
+  color: #bd93f9;
+}
+#title {
+  font-family: 'Press Start 2P', cursive;
+  height: 10vh;
+  line-height: 10vh;
+  /*font-size: 2vh;*/
+  color: #bd93f9;
+  width: 20vw;
+  text-align: center;
+  border: 1px solid transparent;
+  margin:auto;
+}
+
+a:link, a:visited {
+  color: #bd93f9;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  color: #F1FA8C;
+}
+
+
+
+.main-content {
+  background-color: #282a36;
+  border-radius: 10px;
+  width: 66vw;
+  height: 60vh;
+  margin:auto;
+  margin-top: 15vh;
+}
+
+ul {
+  height: 100%;
+  width: 100%;
+  text-align:center;
+  list-style: none;
+  padding-left: 0px;
+  margin-left: 0px;
+  overflow: scroll;
+}
+
+li {
+  font-family: 'Coda', cursive;
+  color: #bd93f9;
+  width: 75%;
+  height: 15vh;
+  line-height: 15vh;
+  font-size: 3vh;
+  margin: auto;
+  border-bottom: solid 2px #8BE9FD;
+}
+
+.player {
+  width: 640px;
+  margin: auto
+}

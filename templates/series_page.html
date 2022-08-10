@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WIP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="top-bar">
+      <h1>WIP</h1>
+    </div>
+    <div class="main-content">
+      <ul>
+      {% for series_title in series_titles %}
+        <li>
+          <a href= "{{ url_for('series_title_page', series_title=series_title) }}">{{ series_title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
+    
+
