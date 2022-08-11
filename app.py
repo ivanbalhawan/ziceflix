@@ -41,3 +41,5 @@ def player(series_title, season, episode_number):
     path = path[0]['path']
     return render_template("player.html", path=path)
 
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
