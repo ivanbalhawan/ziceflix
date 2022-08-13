@@ -22,7 +22,7 @@
       {% for episode in episodes %}
         <li class="entry">
           <a href="{{ url_for('player', series_title=series_title, season=season, episode_number=episode.get('episode_number')) }}">
-            Episode {{ episode.get("episode_number") }}
+	    Episode {{ episode.get("episode_number") }} - {{ episode.get("episode_title") }}
           </a>
         </li>
       {% endfor %}

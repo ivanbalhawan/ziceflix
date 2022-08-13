@@ -69,7 +69,8 @@ class DBTool():
         data = []
         with self.engine.connect() as conn:
             result = conn.execute(text("SELECT * FROM series WHERE "
-                                       f" series_title = \"{series_title}\" AND season_number = {season_number}"))
+                                       f" series_title = \"{series_title}\" AND season_number = {season_number}"
+                                       " ORDER BY episode_number ASC"))
             for row in result:
                 data.append({"episode_number": row.episode_number,
                              "episode_title": row.episode_title,
@@ -109,14 +110,14 @@ class DBTool():
                 for episode_path in season_dir.iterdir():
                     series_title = series_dir.name
                     season_number = int(season_dir.name.strip())
-                    episode_number = int(episode_path.name.split('-')[0].strip())
-                    episode_title = episode_path.name.split('-')[1].strip()
+                    episode_number = int(episode_path.stem.split('-')[0].strip())
+                    episode_title = episode_path.stem.split('-')[1].strip()
                     series_data.append({
                         'series_title': series_title,
                         'season_number': season_number,
                         'episode_number': episode_number,
                         'episode_title': episode_title,
-                        'episode_path': str(episode_path)
+                        'episode_path': str(episode_path).split('/', 1)[1]
                     })
         series_df = pd.DataFrame(series_data)
         return series_df
