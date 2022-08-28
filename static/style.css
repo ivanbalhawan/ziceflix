@@ -1,12 +1,43 @@
+:root {
+  --color-rosewater: rgb(245, 224, 220);
+  --color-flamingo: rgb(242, 205, 205);
+  --color-pink: rgb(245, 194, 231);
+  --color-mauve: rgb(203, 166, 247);
+  --color-red: rgb(243, 139, 168);
+  --color-maroon: rgb(235, 160, 172);
+  --color-peach: rgb(250, 179, 135);
+  --color-yellow: rgb(249, 226, 175);
+  --color-green: rgb(166, 227, 161);
+  --color-teal: rgb(148, 226, 213);
+  --color-sky: rgb(137, 220, 235);
+  --color-sapphire: rgb(116, 199, 236);
+  --color-blue: rgb(137, 180, 250);
+  --color-lavender: rgb(180, 190, 254);
+  --color-text: rgb(205, 214, 244);
+  --color-subtext1: rgb(186, 194, 222);
+  --color-subtext0: rgb(166, 173, 200);
+  --color-overlay2: rgb(147, 153, 178);
+  --color-overlay1: rgb(127, 132, 156);
+  --color-overlay0: rgb(108, 112, 134);
+  --color-surface2: rgb(88, 91, 112);
+  --color-surface1: rgb(69, 71, 90);
+  --color-surface0: rgb(49, 50, 68);
+  --color-base: rgb(30, 30, 46);
+  --color-mantle: rgb(24, 24, 37);
+  --color-crust: rgb(17, 17, 27);
+
+
+}
+
 body {
   margin: 0px;
-  background-color: #44475a;
+  background-color: var(--color-base);
 }
 
 .top-bar {
   border: none;
   height: 10vh;
-  background-color: #282a36;
+  background-color: var(--color-crust);
 }
 #nav-bar {
   position: absolute;
@@ -16,18 +47,18 @@ body {
   display: inline-block;
 }
 .nav-button {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Cairo', sans-serif;
   display: inline-block;
   margin-right: 3vw;
   text-align: center;
-  color: #bd93f9;
+  color: var(--color-text);
 }
 #title {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Cairo', sans-serif;
   height: 10vh;
   line-height: 10vh;
   /*font-size: 2vh;*/
-  color: #bd93f9;
+  color: var(--color-text);
   width: 20vw;
   text-align: center;
   border: 1px solid transparent;
@@ -35,19 +66,19 @@ body {
 }
 
 a:link, a:visited {
-  color: #bd93f9;
+  color: var(--color-text);
   text-decoration: none;
 }
 
 a:hover, a:active {
   text-decoration: none;
-  color: #F1FA8C;
+  color: var(--color-mauve);
 }
 
 
 
 .main-content {
-  background-color: #282a36;
+  background-color: var(--color-crust);
   border-radius: 10px;
   width: 66vw;
   height: 60vh;
@@ -66,8 +97,8 @@ ul {
 }
 
 li {
-  font-family: 'Coda', cursive;
-  color: #bd93f9;
+  font-family: 'Cairo', sans-serif;
+  color: var(--color-text);
   width: 75%;
   height: 15vh;
   line-height: 15vh;
